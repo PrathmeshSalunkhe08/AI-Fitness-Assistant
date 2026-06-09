@@ -1,0 +1,100 @@
+Food_Name,Category,Calories,Carbohydrates,Protein,Fats,Free_Sugar,Fibre,Sodium,Calcium,Iron,Vitamin_C,Folate,diet_type
+Boiled Eggs Toast,Breakfast,270,20,14,12,2,3,300,60,2,0,25,mixed
+Egg Bhurji Roti,Breakfast,280,22,14,12,2,3,300,70,2,5,30,mixed
+Idli Sambar,Breakfast,280,45,9,5,3,6,350,50,2,12,40,veg
+Paneer Paratha (Low Oil),Breakfast,320,30,12,15,3,4,400,150,2,5,30,veg
+Paneer Sandwich,Breakfast,290,30,12,10,4,3,250,150,2,4,25,veg
+Peanut Butter Multigrain Toast,Breakfast,320,30,12,18,6,4,300,60,2,0,30,veg
+Peanut Butter Sandwich,Breakfast,300,28,10,15,5,3,280,50,2,0,25,veg
+Apple Oats,Breakfast,230,35,7,5,10,4,100,80,1.5,10,35,veg
+Banana Smoothie,Breakfast,200,35,5,3,12,3,80,100,1,12,25,veg
+Besan Chilla,Breakfast,210,22,9,8,2,5,220,50,2.5,6,35,veg
+Boiled Corn,Breakfast,180,32,5,2,5,4,150,10,1,6,20,veg
+Eggs Boiled Or Omelette,Breakfast,160,2,13,11,1,0,140,50,2,0,20,mixed
+Fruit Yogurt Bowl,Breakfast,220,30,8,6,10,3,120,150,1,15,30,veg
+Milk Cornflakes,Breakfast,260,40,8,6,10,2,200,200,5,0,40,veg
+Millet Upma,Breakfast,220,35,7,5,2,6,250,40,2,8,50,veg
+Moong Dal Chilla,Breakfast,200,25,10,5,2,5,200,60,2.5,6,45,veg
+Oats Milk,Breakfast,250,40,10,6,8,4,150,200,2,0,40,veg
+Oats Upma,Breakfast,220,35,8,6,3,5,220,40,2,8,35,veg
+Ragi Porridge,Breakfast,190,30,6,4,2,4,180,120,3,5,50,veg
+Sattu Drink,Breakfast,200,30,10,4,5,5,120,60,2,5,40,veg
+Sprouts Salad,Breakfast,180,25,10,3,2,6,150,40,3,15,60,veg
+Upma,Breakfast,240,38,6,7,3,4,260,40,1.5,6,30,veg
+Vegetable Dalia,Breakfast,230,38,7,5,3,6,250,35,2,8,40,veg
+Vegetable Omelette,Breakfast,210,10,13,14,2,2,220,60,2,8,30,mixed
+Vegetable Poha,Breakfast,250,40,6,8,4,4,300,30,1.5,10,25,veg
+Brown Rice Dal,Lunch,350,55,12,8,3,8,400,60,3,10,80,veg
+Chicken Curry Roti,Lunch,420,40,24,14,2,3,500,50,2,3,40,mixed
+Chole Roti,Lunch,400,50,14,12,5,8,520,80,3.5,10,85,veg
+Curd Rice,Lunch,300,45,9,7,3,2,320,150,1.5,2,40,veg
+Dal Tadka Brown Rice,Lunch,360,50,12,8,3,6,400,70,2.5,10,80,veg
+Dal Tadka Rice,Lunch,360,50,12,8,3,6,400,70,2.5,10,80,veg
+Dal Tadka Roti,Lunch,340,45,12,8,3,6,380,70,2.5,10,80,veg
+Egg Curry Rice,Lunch,390,48,16,12,2,4,450,80,2.5,5,55,mixed
+Fish Curry Rice,Lunch,400,50,22,10,0,3,480,50,2,0,25,mixed
+Jeera Rice Dal,Lunch,340,50,11,7,3,5,370,60,2,10,75,veg
+Lemon Rice,Lunch,310,48,7,9,4,3,400,40,1.5,8,35,veg
+Mixed Veg Roti,Lunch,300,42,8,8,4,7,350,80,2,15,75,veg
+Paneer Bhurji Roti,Lunch,380,35,18,20,3,5,450,200,2,8,60,veg
+Paneer Butter Masala Rice,Lunch,480,55,18,20,4,5,520,200,2,8,60,veg
+Paneer Butter Masala Roti,Lunch,450,40,18,22,4,5,500,200,2,8,60,veg
+Paneer Rice Bowl,Lunch,410,45,15,14,4,5,400,200,2,6,60,veg
+Rajma Chawal,Lunch,400,60,13,10,4,9,500,70,3,8,90,veg
+Rajma Rice,Lunch,420,60,14,10,4,9,500,70,3,8,90,veg
+Rajma Roti Curd,Lunch,420,55,15,12,4,8,500,150,3,8,90,veg
+Roti Paneer Sabzi,Lunch,380,40,14,15,4,6,450,180,2.5,12,60,veg
+Sambar Rice,Lunch,330,52,10,6,3,6,380,70,2,12,80,veg
+Soybean Curry Roti,Lunch,380,40,18,10,3,7,430,90,3,8,85,veg
+Tofu Stir Fry Rice,Lunch,350,42,14,10,2,5,380,120,3,12,70,veg
+Veg Kolhapuri Rice,Lunch,400,50,10,14,4,5,480,120,2,15,70,veg
+Veg Kolhapuri Roti,Lunch,380,40,10,15,4,6,450,120,2,15,70,veg
+Grilled Chicken Breast,Lunch,220,0,35,5,0,0,120,15,1,0,10,mixed
+Grilled Chicken Rice,Lunch,420,45,25,12,0,3,450,40,2,0,30,mixed
+Vegetable Khichdi,Lunch,300,45,10,8,3,7,350,60,2.5,12,70,veg
+Vegetable Pulao,Lunch,320,50,8,8,4,5,350,60,2,10,60,veg
+Almonds,Snack,170,6,6,15,1,3,1,70,1,0,15,veg
+Apple Peanut Butter,Snack,200,25,5,10,10,4,100,40,1,8,20,veg
+Banana,Snack,120,27,1,0,14,3,1,5,0.3,10,20,veg
+Boiled Corn,Snack,180,32,5,2,5,4,150,10,1,6,20,veg
+Boiled Eggs,Snack,140,2,12,10,1,0,140,50,2,0,20,mixed
+Boiled Sweet Potato,Snack,160,35,2,0,7,5,70,30,1,20,35,veg
+Buttermilk,Snack,80,10,4,2,6,1,120,120,0.2,5,15,veg
+Coconut Water,Snack,60,15,0,0,10,1,40,20,0.3,5,5,veg
+Dark Chocolate,Snack,150,15,2,10,10,2,10,40,2,0,10,veg
+Energy Bar,Snack,220,30,8,8,12,3,150,100,2,5,30,veg
+Fox Nuts Makhana,Snack,120,20,4,2,1,2,50,60,1,0,15,veg
+Fruit Salad,Snack,120,25,2,1,18,3,10,30,1,25,40,veg
+Greek Yogurt Curd,Snack,120,10,8,5,6,0,100,150,0.2,2,20,veg
+Makhana,Snack,120,20,4,2,1,2,50,60,1,0,15,veg
+Mixed Nuts,Snack,180,8,6,15,2,3,1,70,1,0,15,veg
+Oats Cookies,Snack,200,30,4,8,12,3,150,60,1,0,20,veg
+Paneer Cubes,Snack,200,5,12,15,2,0,200,200,0.5,0,20,veg
+Peanut Chikki,Snack,180,20,5,9,12,2,50,40,1,0,10,veg
+Roasted Chana,Snack,150,25,8,2,1,6,200,40,2,0,30,veg
+Roasted Peanuts,Snack,180,10,7,15,2,3,100,50,1,0,20,veg
+Sprouts Chat,Snack,180,25,10,3,2,6,200,50,3,15,60,veg
+Whey Protein Shake,Snack,220,10,25,8,2,1,150,200,2,0,25,veg
+Yogurt,Snack,100,8,5,4,7,0,80,150,0.2,2,15,veg
+Dal Roti,Dinner,280,40,10,6,3,5,350,70,2,10,70,veg
+Egg Curry Roti,Dinner,320,28,16,14,2,4,380,80,2,6,55,mixed
+Mixed Dal Rice,Dinner,380,50,12,7,3,6,370,70,2,10,75,veg
+Mixed Dal Roti,Dinner,350,40,12,8,3,7,350,80,3,10,85,veg
+Paneer Bhurji Roti,Dinner,350,30,15,18,3,5,420,180,2,8,60,veg
+Vegetable Soup Toast,Dinner,220,30,6,5,4,4,300,80,2,25,50,veg
+Chicken Soup,Dinner,220,10,20,10,1,2,320,40,1.5,10,30,mixed
+Chicken Stir Fry,Dinner,300,12,26,14,1,3,350,40,2,12,35,mixed
+Chicken Tikka Small,Dinner,200,5,22,10,1,1,350,50,2,2,30,mixed
+Clear Soup Salad,Dinner,180,15,5,5,3,4,200,60,1.5,25,60,veg
+Dal Soup,Dinner,200,25,9,5,2,5,250,70,2,8,60,veg
+Egg Omelette,Dinner,220,5,13,15,1,1,200,60,2,5,25,mixed
+Egg White Bhurji,Dinner,150,3,18,5,1,0,120,30,1,0,15,mixed
+Fish Fry Less Oil,Dinner,250,5,22,14,0,1,400,60,2,0,30,mixed
+Fish Grill,Dinner,280,5,25,15,0,1,300,50,2,0,20,mixed
+Grilled Chicken Salad,Dinner,300,10,28,15,0,4,350,60,2,20,40,mixed
+Moong Dal Khichdi,Dinner,270,38,10,6,3,6,300,60,2,12,75,veg
+Paneer Salad,Dinner,300,15,14,18,3,3,350,200,2,10,50,veg
+Paneer Tikka Salad,Dinner,300,10,18,20,3,4,300,200,2,10,50,veg
+Stir Fry Vegetables,Dinner,200,20,6,8,4,6,250,100,2,30,80,veg
+Tofu Stir Fry,Dinner,250,18,14,12,2,5,300,120,3,15,70,veg
+Vegetable Dalia Dinner,Dinner,230,38,7,5,3,6,250,35,2,8,40,veg

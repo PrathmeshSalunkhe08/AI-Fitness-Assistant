@@ -1,0 +1,295 @@
+/* CSS Custom Properties for Consistency (Dark Energetic Red-Black-White Theme with Visible Text) */
+:root {
+  --primary-gradient: linear-gradient(135deg, #ff0000 0%, #000000 100%);
+  --secondary-gradient: linear-gradient(45deg, #ffffff 0%, #ffcccc 100%);
+  --accent-color: #ff0000;
+  --glass-bg: rgba(32, 32, 32, 0.9); /* Dark gray-black for energetic cards */
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.7);
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-light: #000000;
+  --border-radius: 15px;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s ease;
+  --font-family: 'Roboto', sans-serif;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--primary-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background: var(--glass-bg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-light);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar a:hover {
+  color: var(--accent-color);
+  transform: translateX(-2px);
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  background: #000000; /* Solid black background for chat area */
+}
+
+.chat-area h2 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat Box (Scrollable Messages) */
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md);
+  background: var(--glass-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-lg);
+  max-height: 60vh; /* Limit height for scrolling */
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #ff6666;
+}
+
+/* Message Styles */
+.user-msg, .ai-msg {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  position: relative;
+  max-width: 70%;
+  word-wrap: break-word;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.user-msg {
+  background: var(--accent-color);
+  color: var(--text-primary);
+  align-self: flex-end;
+  margin-left: auto;
+  box-shadow: var(--shadow-light);
+}
+
+.ai-msg {
+  background: rgba(64, 64, 64, 0.8);
+  color: var(--text-secondary);
+  align-self: flex-start;
+  box-shadow: var(--shadow-light);
+}
+
+.user-msg strong, .ai-msg strong {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.delete-msg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: var(--transition-fast);
+}
+
+.delete-msg:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* Form */
+.chat-area form {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.chat-area form input {
+  flex: 1;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+}
+
+.chat-area form input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.3);
+}
+
+.chat-area form button {
+  background: var(--accent-color);
+  color: var(--text-primary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-light);
+}
+
+.chat-area form button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Delete Entire Day Link */
+.delete-day {
+  display: inline-block;
+  background: rgba(255, 0, 0, 0.8);
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-light);
+  align-self: center;
+}
+
+.delete-day:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: var(--spacing-md);
+  }
+  
+  .chat-area {
+    padding: var(--spacing-md);
+  }
+  
+  .chat-area h2 {
+    font-size: 1.8rem;
+  }
+  
+  .chat-box {
+    max-height: 50vh;
+  }
+  
+  .user-msg, .ai-msg {
+    max-width: 85%;
+  }
+  
+  .chat-area form {
+    flex-direction: column;
+  }
+  
+  .chat-area form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar a {
+    font-size: 1.1rem;
+  }
+  
+  .chat-area h2 {
+    font-size: 1.5rem;
+  }
+  
+  .user-msg, .ai-msg {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  .delete-day {
+    font-size: 0.9rem;
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar a,
+  .delete-msg,
+  .chat-area form button,
+  .delete-day,
+  .user-msg,
+  .ai-msg {
+    animation: none;
+    transition: none;
+  }
+}

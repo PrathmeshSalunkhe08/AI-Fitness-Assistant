@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Chat | House of Fitness</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .chat-layout {
+            display: flex;
+            max-width: 1600px;
+            width: 95%;
+            margin: auto;
+            padding: var(--spacing-md) 0;
+            gap: var(--spacing-lg);
+            height: calc(100vh - 105px);
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 300px;
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .sidebar h3 {
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .new-chat-btn {
+            display: block;
+            background: var(--secondary-gradient);
+            color: var(--text-light);
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            transition: all var(--transition-fast);
+        }
+
+        .new-chat-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 204, 204, 0.4);
+        }
+
+        .session-list {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .session-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .session-item:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.3);
+        }
+
+        .session-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            flex: 1;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .delete-btn {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0 5px;
+            transition: transform 0.2s;
+        }
+
+        .delete-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .chat-area {
+            flex: 1;
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 0.5s ease-out 0.1s both;
+        }
+
+        .chat-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .chat-header h2 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .chat-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .chat-form input {
+            flex: 1;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+
+        .chat-form input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .chat-form button {
+            background: var(--secondary-gradient);
+            color: var(--text-light);
+            padding: 0 25px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .chat-form button:hover {
+            box-shadow: 0 5px 15px rgba(255, 204, 204, 0.4);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .chat-layout {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-center">
+            <img src="/static/images/gym-logo.png" alt="House of Fitness Logo" class="header-logo">
+            <h1 class="brand-name">House of Fitness</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-btn">Dashboard</a>
+            <a href="/about" class="nav-btn">About Us</a>
+            <a href="/logout" class="nav-btn logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="chat-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h3>💬 Chat History</h3>
+                <a href="{{ url_for('new_chat') }}" class="new-chat-btn">+ New Chat</a>
+
+                <div class="session-list">
+                    {% for s in sessions %}
+                        <div class="session-item">
+                            <a href="/chat/{{ s[0] }}" class="session-link">
+                                {{ s[1] }}
+                            </a>
+                            <a href="/delete_session/{{ s[0] }}" class="delete-btn" title="Delete Chat">🗑</a>
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                <a href="/" style="display: block; text-align: center; margin-top: 20px; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); color: white; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,0,0,0.2)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='rgba(0,0,0,0.4)'; this.style.transform='none';">⬅ Back to Dashboard</a>
+            </div>
+
+            <!-- Main Chat Area -->
+            <div class="chat-area">
+                <div class="chat-header">
+                    <h2 class="page-title" style="font-size: 2.5rem; margin-bottom: 10px;"><img src="/static/images/ai%20chatbot%20(2).png" class="title-icon" alt="icon"> Fitness Buddy</h2>
+                    <p>Select a chat from the left or start a new conversation.</p>
+                </div>
+
+                <form method="POST" action="/ai_chat" class="chat-form">
+                    <input type="text" name="message" placeholder="Ask about workouts, diets..." required autocomplete="off">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

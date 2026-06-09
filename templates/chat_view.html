@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Chat | House of Fitness</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .chat-layout {
+            display: flex;
+            max-width: 1600px;
+            width: 95%;
+            margin: auto;
+            padding: var(--spacing-md) 0;
+            gap: var(--spacing-lg);
+            height: calc(100vh - 105px);
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.5s ease-out;
+            justify-content: center;
+        }
+
+        .back-btn {
+            display: block;
+            background: rgba(0, 0, 0, 0.4);
+            color: var(--text-primary);
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all var(--transition-fast);
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .chat-area {
+            flex: 1;
+            min-width: 0;
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.5s ease-out 0.1s both;
+            overflow: hidden;
+        }
+
+        .chat-area h2 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+            margin-bottom: var(--spacing-md);
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            scroll-behavior: smooth;
+        }
+
+        .user-msg, .ai-msg {
+            max-width: 85%;
+            padding: 12px 18px;
+            border-radius: 12px;
+            line-height: 1.5;
+            position: relative;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            animation: fadeInUp 0.3s ease-out;
+            width: fit-content;
+        }
+
+        .user-msg {
+            background: rgba(255, 0, 0, 0.15);
+            color: #fff;
+            align-self: flex-end;
+            border-bottom-right-radius: 2px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+
+        .ai-msg {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            align-self: flex-start;
+            border-bottom-left-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ai-msg p { margin-top: 5px; margin-bottom: 5px; }
+        .ai-msg p:first-child { margin-top: 0; }
+        .ai-msg p:last-child { margin-bottom: 0; }
+        
+        .ai-msg pre {
+            white-space: pre-wrap;
+            word-break: break-all;
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .ai-msg code {
+            font-family: monospace;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        
+        .ai-msg ul, .ai-msg ol {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .ai-msg img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .ai-msg strong { color: var(--accent-color); }
+        .user-msg strong { color: #fff; }
+
+        .delete-msg {
+            position: absolute;
+            top: 5px;
+            right: -25px;
+            color: #ff4d4d;
+            text-decoration: none;
+            font-size: 0.9em;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .user-msg:hover .delete-msg, .ai-msg:hover .delete-msg {
+            opacity: 1;
+        }
+
+        .chat-form {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .chat-form input {
+            flex: 1;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+        }
+
+        .chat-form input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .chat-form button {
+            background: var(--secondary-gradient);
+            color: var(--text-light);
+            padding: 0 25px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .chat-form button:hover {
+            box-shadow: 0 5px 15px rgba(255, 204, 204, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .delete-day {
+            display: block;
+            text-align: center;
+            color: #ff4d4d;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 10px;
+            background: rgba(255,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255,0,0,0.2);
+        }
+
+        .delete-day:hover {
+            color: white;
+            background: rgba(255,0,0,0.3);
+            text-shadow: 0 0 5px red;
+        }
+
+        @media (max-width: 768px) {
+            .chat-layout {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar {
+                width: 100%;
+                box-sizing: border-box;
+                padding: var(--spacing-sm);
+            }
+            .chat-box {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-center">
+            <img src="/static/images/gym-logo.png" alt="House of Fitness Logo" class="header-logo">
+            <h1 class="brand-name">House of Fitness</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-btn">Dashboard</a>
+            <a href="/about" class="nav-btn">About Us</a>
+            <a href="/logout" class="nav-btn logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="chat-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="/chat" class="back-btn">⬅ Back to Histories</a>
+                <a href="/" class="back-btn" style="margin-top: 15px;">⬅ Back to Dashboard</a>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-area">
+                <h2 class="page-title" style="font-size: 1.8rem; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;"><img src="/static/images/ai%20chatbot%20(2).png" class="title-icon" alt="icon" style="height: 40px"> Fitness Buddy</h2>
+
+                <div class="chat-box" id="chatBox">
+                    {% for msg in messages %}
+                        <div class="{{ 'user-msg' if msg[1]=='user' else 'ai-msg' }}">
+                            <strong>{{ msg[1].capitalize() }}:</strong> 
+                            {% if msg[1] == 'user' %}
+                                <span style="white-space: pre-wrap;">{{ msg[2] }}</span>
+                            {% else %}
+                                <span>{{ msg[2] | safe }}</span>
+                            {% endif %}
+                            <a href="/delete_message/{{ msg[0] }}" class="delete-msg" title="Delete message">❌</a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <form method="POST" action="/ai_chat" class="chat-form">
+                    <input type="text" name="message" placeholder="Type your message..." autocomplete="off" required>
+                    <button type="submit">Send</button>
+                </form>
+
+                <a href="/delete_session/{{ session_id }}" class="delete-day">
+                    🗑 Delete Entire Day
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Auto-scroll to bottom of chat
+        const chatBox = document.getElementById("chatBox");
+        if (chatBox) {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>

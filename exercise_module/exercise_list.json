@@ -1,0 +1,597 @@
+{
+  "legs": [
+  {
+    "name": "Leg Extension",
+    "video": "/static/videos/legs/leg extension.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Machine",
+    "primary_muscle": "Quadriceps",
+    "secondary_muscle": "Knees"
+  },
+  {
+    "name": "Leg Curl",
+    "video": "/static/videos/legs/leg curl.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Machine",
+    "primary_muscle": "Hamstrings",
+    "secondary_muscle": "Calves"
+  },
+  {
+    "name": "Smith Calf Raise",
+    "video": "/static/videos/legs/Smith Calf Raise.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Smith Machine",
+    "primary_muscle": "Calves",
+    "secondary_muscle": "Ankles"
+  },
+
+  {
+    "name": "Leg Press",
+    "video": "/static/videos/legs/Leg Press.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Machine",
+    "primary_muscle": "Quadriceps",
+    "secondary_muscle": "Glutes"
+  },
+  {
+    "name": "Romanian Deadlift",
+    "video": "/static/videos/legs/Romanian Deadlift.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Barbell",
+    "primary_muscle": "Hamstrings",
+    "secondary_muscle": "Glutes"
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "video": "/static/videos/legs/Bulgarian Split Squat.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Bodyweight/Dumbbell",
+    "primary_muscle": "Glutes",
+    "secondary_muscle": "Quadriceps"
+  },
+
+  {
+    "name": "Barbell Back Squat",
+    "video": "/static/videos/legs/Barbell Back Squat.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Barbell",
+    "primary_muscle": "Quadriceps",
+    "secondary_muscle": "Glutes"
+  },
+  {
+    "name": "Barbell Hip Thrust",
+    "video": "/static/videos/legs/Barbell Hip Thrust.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Barbell",
+    "primary_muscle": "Glutes",
+    "secondary_muscle": "Hamstrings"
+  },
+  {
+    "name": "Dumbbell Squat",
+    "video": "/static/videos/legs/Dumbbell Squat.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Dumbbell",
+    "primary_muscle": "Quadriceps",
+    "secondary_muscle": "Core"
+  }
+],
+  "chest": [
+  {
+    "name": "Push-ups",
+    "video": "/static/videos/chest/Push-ups.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "None",
+    "primary_muscle": "Middle Chest",
+    "secondary_muscle": "Triceps"
+  },
+  {
+    "name": "Wide Grip Push-ups",
+    "video": "/static/videos/chest/Wide Grip Push-ups.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "None",
+    "primary_muscle": "Outer Chest",
+    "secondary_muscle": "Shoulders"
+  },
+  {
+    "name": "Incline Push-Ups",
+    "video": "/static/videos/chest/Incline Push-Ups.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Bench",
+    "primary_muscle": "Lower Chest",
+    "secondary_muscle": "Triceps"
+  },
+
+  {
+    "name": "Dumbbell Bench Press",
+    "video": "/static/videos/chest/Dumbbell Bench Press.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Middle Chest",
+    "secondary_muscle": "Triceps"
+  },
+  {
+    "name": "Dumbbell Incline Fly",
+    "video": "/static/videos/chest/Dumbbell Incline Fly.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Upper Chest",
+    "secondary_muscle": "Shoulders"
+  },
+  {
+    "name": "Chest Dips",
+    "video": "/static/videos/chest/Chest Dips.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dip Bars",
+    "primary_muscle": "Lower Chest",
+    "secondary_muscle": "Triceps"
+  },
+
+  {
+    "name": "Barbell Bench Press",
+    "video": "/static/videos/chest/Barbell Bench Press.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Barbell",
+    "primary_muscle": "Full Chest",
+    "secondary_muscle": "Triceps"
+  },
+  {
+    "name": "Barbell Incline Bench Press",
+    "video": "/static/videos/chest/Barbell Incline Bench Press.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Barbell",
+    "primary_muscle": "Upper Chest",
+    "secondary_muscle": "Shoulders"
+  },
+  {
+    "name": "Cable Standing Fly, Crossover fly",
+    "video": "/static/videos/chest/Cable Standing Fly, Crossover fly.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Inner Chest",
+    "secondary_muscle": "Shoulders"
+  }
+],
+  "biceps": [
+  {
+    "name": "Dumbbell Incline Curl",
+    "video": "/static/videos/biceps/Dumbbell Incline Curl.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbell Bench",
+    "primary_muscle": "Biceps Long Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Lever Preacher Curl",
+    "video": "/static/videos/biceps/Lever Preacher Curl.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Machine",
+    "primary_muscle": "Biceps Short Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Dumbbell Cross Body Hammer Curl",
+    "video": "/static/videos/biceps/Dumbbell Cross Body Hammer Curl.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbell",
+    "primary_muscle": "Brachialis",
+    "secondary_muscle": "Forearms"
+  },
+
+  {
+    "name": "Barbell Drag Curl",
+    "video": "/static/videos/biceps/Barbell Drag Curl.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Barbell",
+    "primary_muscle": "Biceps Long Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Dumbbell Seated Preacher Curl",
+    "video": "/static/videos/biceps/Dumbbell Seated Preacher Curl.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbell Bench",
+    "primary_muscle": "Biceps Short Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Dumbbell Incline Hammer Curl",
+    "video": "/static/videos/biceps/Dumbbell Incline Hammer Curl.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbell Bench",
+    "primary_muscle": "Brachialis",
+    "secondary_muscle": "Forearms"
+  },
+
+  {
+    "name": "Dumbbell Incline Biceps Curl",
+    "video": "/static/videos/biceps/Dumbbell Incline Biceps Curl.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Dumbbell Bench",
+    "primary_muscle": "Biceps Long Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "EZ Barbell Biceps Curl",
+    "video": "/static/videos/biceps/EZ Barbell Biceps Curl.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "EZ Bar",
+    "primary_muscle": "Biceps Short Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Dumbbell Hammer Curl",
+    "video": "/static/videos/biceps/Dumbbell Cross Body Hammer Curl.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Dumbbell",
+    "primary_muscle": "Brachialis",
+    "secondary_muscle": "Forearms"
+  }
+],
+  "triceps": [
+  {
+    "name": "Bench Dips",
+    "video": "/static/videos/triceps/Bench Dips.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Bench",
+    "primary_muscle": "Triceps",
+    "secondary_muscle": "Shoulders"
+  },
+  {
+    "name": "Cable Triceps Pushdown",
+    "video": "/static/videos/triceps/Cable Triceps Pushdown.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Triceps",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Dumbbell One Arm Triceps Extension",
+    "video": "/static/videos/triceps/Dumbbell One Arm Triceps Extension.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbell",
+    "primary_muscle": "Triceps Long Head",
+    "secondary_muscle": "Forearms"
+  },
+
+  {
+    "name": "Barbell Close Grip Bench Press",
+    "video": "/static/videos/triceps/Barbell Close Grip Bench Press.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Barbell",
+    "primary_muscle": "Triceps",
+    "secondary_muscle": "Chest"
+  },
+  {
+    "name": "EZ Barbell Lying Triceps Extension",
+    "video": "/static/videos/triceps/EZ Barbell Lying Triceps Extension.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "EZ Bar",
+    "primary_muscle": "Triceps Long Head",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Cable Overhead Triceps Extension",
+    "video": "/static/videos/triceps/Cable Rope High Pulley Overhead Triceps Extension.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Triceps Long Head",
+    "secondary_muscle": "Shoulders"
+  },
+
+  {
+    "name": "Lever Triceps Extension",
+    "video": "/static/videos/triceps/Lever Triceps Extension.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Machine",
+    "primary_muscle": "Triceps",
+    "secondary_muscle": "Forearms"
+  },
+  {
+    "name": "Lever Seated Dips",
+    "video": "/static/videos/triceps/Lever Seated Dips.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Machine",
+    "primary_muscle": "Triceps",
+    "secondary_muscle": "Chest"
+  },
+  {
+    "name": "Cable Rope High Pulley Overhead Triceps Extension",
+    "video": "/static/videos/triceps/Cable Rope High Pulley Overhead Triceps Extension.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Triceps Long Head",
+    "secondary_muscle": "Shoulders"
+  }
+],
+  "abs": [
+  {
+    "name": "Sit-ups",
+    "video": "/static/videos/abs/Sit-ups.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "None",
+    "primary_muscle": "Upper Abs",
+    "secondary_muscle": "Core"
+  },
+  {
+    "name": "Lying Floor Leg Raise",
+    "video": "/static/videos/abs/Lying Floor Leg Raise.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "None",
+    "primary_muscle": "Lower Abs",
+    "secondary_muscle": "Hip Flexors"
+  },
+  {
+    "name": "45 Degree Side Bend",
+    "video": "/static/videos/abs/45 Degree Side Bend.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "None",
+    "primary_muscle": "Obliques",
+    "secondary_muscle": "Core"
+  },
+
+  {
+    "name": "Crunch (on bench)",
+    "video": "/static/videos/abs/Crunch (on bench).mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Bench",
+    "primary_muscle": "Upper Abs",
+    "secondary_muscle": "Core"
+  },
+  {
+    "name": "Hanging Leg Hip Raise",
+    "video": "/static/videos/abs/Hanging Leg Hip Raise.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Pull-up Bar",
+    "primary_muscle": "Lower Abs",
+    "secondary_muscle": "Hip Flexors"
+  },
+  {
+    "name": "Twisting Crunch",
+    "video": "/static/videos/abs/Twisting Crunch.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "None",
+    "primary_muscle": "Obliques",
+    "secondary_muscle": "Upper Abs"
+  },
+
+  {
+    "name": "V-up",
+    "video": "/static/videos/abs/V-up.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "None",
+    "primary_muscle": "Full Abs",
+    "secondary_muscle": "Hip Flexors"
+  },
+  {
+    "name": "Vertical Leg Raise (on parallel bars)",
+    "video": "/static/videos/abs/Vertical Leg Raise (on parallel bars).mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Parallel Bars",
+    "primary_muscle": "Lower Abs",
+    "secondary_muscle": "Core"
+  },
+  {
+    "name": "45 Degree Bicycle Twisting Crunch",
+    "video": "/static/videos/abs/45 Degree Bycicle Twisting Crunch.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "None",
+    "primary_muscle": "Obliques",
+    "secondary_muscle": "Upper Abs"
+  }
+],
+  "back": [
+  {
+    "name": "Lat Pulldown",
+    "video": "/static/videos/back/Cable Pulldown.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Lats",
+    "secondary_muscle": "Biceps"
+  },
+  {
+    "name": "Seated Cable Row",
+    "video": "/static/videos/back/Cable Seated Row (normal grip).mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Middle Back",
+    "secondary_muscle": "Lats"
+  },
+  {
+    "name": "Back Extension",
+    "video": "/static/videos/back/45 Degree Hyperextension.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Hyperextension Bench",
+    "primary_muscle": "Lower Back",
+    "secondary_muscle": "Glutes"
+  },
+
+  {
+    "name": "Wide Grip Lat Pulldown",
+    "video": "/static/videos/back/Cable Bar Lateral Pulldown (wide shoulder grip).mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Upper Lats",
+    "secondary_muscle": "Biceps"
+  },
+  {
+    "name": "Dumbbell Bent-over Row",
+    "video": "/static/videos/back/Dumbbell Bent-over Row.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Middle Back",
+    "secondary_muscle": "Rear Delts"
+  },
+  {
+    "name": "T-Bar Row",
+    "video": "/static/videos/back/Lever T-bar Row.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "T-Bar Machine",
+    "primary_muscle": "Middle Back",
+    "secondary_muscle": "Lats"
+  },
+
+  {
+    "name": "Pull-up",
+    "video": "/static/videos/back/Pull-up (wide front grip).mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Pull-up Bar",
+    "primary_muscle": "Lats",
+    "secondary_muscle": "Biceps"
+  },
+  {
+    "name": "Barbell Bent-over Row",
+    "video": "/static/videos/back/Barbell Bent-over Row Overgrip.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Barbell",
+    "primary_muscle": "Full Back",
+    "secondary_muscle": "Rear Delts"
+  },
+  {
+    "name": "Deadlift",
+    "video": "/static/videos/back/Smith Deadlift - Deadlift.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Smith Machine",
+    "primary_muscle": "Lower Back",
+    "secondary_muscle": "Hamstrings"
+  }
+],
+  "shoulders": [
+  {
+    "name": "Dumbbell Lateral Raise",
+    "video": "/static/videos/shoulders/Dumbbell Lateral Raise.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Side Delts",
+    "secondary_muscle": "Traps"
+  },
+  {
+    "name": "Dumbbell Front Raise",
+    "video": "/static/videos/shoulders/Dumbbell Front Raise.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Front Delts",
+    "secondary_muscle": "Upper Chest"
+  },
+  {
+    "name": "Rear Delt Row",
+    "video": "/static/videos/shoulders/Dumbbell Rear Delt Row.mp4",
+    "duration": "8s",
+    "intensity": "beginner",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Rear Delts",
+    "secondary_muscle": "Upper Back"
+  },
+
+  {
+    "name": "Military Press",
+    "video": "/static/videos/shoulders/Military Press.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Barbell",
+    "primary_muscle": "Front Delts",
+    "secondary_muscle": "Triceps"
+  },
+  {
+    "name": "Cable Lateral Raise",
+    "video": "/static/videos/shoulders/Cable Lateral Raise.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Cable Machine",
+    "primary_muscle": "Side Delts",
+    "secondary_muscle": "Traps"
+  },
+  {
+    "name": "Dumbbell Arnold Press",
+    "video": "/static/videos/shoulders/Dumbbell Arnold Press.mp4",
+    "duration": "10s",
+    "intensity": "intermediate",
+    "equipment": "Dumbbells",
+    "primary_muscle": "Full Shoulders",
+    "secondary_muscle": "Triceps"
+  },
+
+  {
+    "name": "Smith Seated Shoulder Press",
+    "video": "/static/videos/shoulders/Smith Seated Shoulder Press.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Smith Machine",
+    "primary_muscle": "Front Delts",
+    "secondary_muscle": "Triceps"
+  },
+  {
+    "name": "Lever Lateral Raise",
+    "video": "/static/videos/shoulders/Lever Lateral Raise.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Machine",
+    "primary_muscle": "Side Delts",
+    "secondary_muscle": "Traps"
+  },
+  {
+    "name": "Lever Seated Reverse Fly",
+    "video": "/static/videos/shoulders/Lever Seated Reverse Fly.mp4",
+    "duration": "12s",
+    "intensity": "professional",
+    "equipment": "Machine",
+    "primary_muscle": "Rear Delts",
+    "secondary_muscle": "Upper Back"
+  }
+]
+}

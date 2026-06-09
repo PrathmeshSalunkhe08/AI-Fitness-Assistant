@@ -1,0 +1,7 @@
+Field                Type                 Null       Key        Default              Extra               
+----------------------------------------------------------------------------------------------------
+id                   int(11)              NO         PRI        None                 auto_increment      
+session_id           int(11)              NO         MUL        None                                     
+sender               enum('user','ai')    NO                    None                                     
+message              text                 NO                    None                                     
+created_at           timestamp            NO                    current_timestamp()                      

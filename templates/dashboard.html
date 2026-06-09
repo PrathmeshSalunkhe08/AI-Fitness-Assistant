@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI-powered fitness dashboard for personalized diet, exercise, and posture guidance">
+    <title>Dashboard | House of Fitness</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="dashboard-header">
+
+        <div class="header-center">
+            <img src="/static/images/gym-logo.png" alt="House of Fitness Logo" class="header-logo">
+            <h1 class="brand-name">House of Fitness</h1>
+        </div>
+
+        <!-- <a href="/logout" class="logout-btn" aria-label="Logout from your account">Logout</a> -->
+        <div class="nav-links">
+            <a href="/about" class="nav-btn">About Us</a>
+            <a href="/contact" class="nav-btn">Contact Us</a>
+            <a href="/logout" class="nav-btn logout-btn">Logout</a>
+        </div>
+
+    </header>
+
+
+    <main class="dashboard-main">
+        <!-- Hero Section: Simplified intro without stats -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h2 id="hero-title">Welcome to House of Fitness</h2>
+                <p>Your intelligent AI-powered fitness ecosystem designed to transform how you train, eat, and improve
+                    your posture.
+                    From personalized nutrition planning to real-time posture correction, House of Fitness combines
+                    artificial intelligence,
+                    data analytics, and computer vision to deliver a complete, smart health solution — all in one
+                    platform.</p>
+
+            </div>
+        </section>
+
+        <!-- Feature Showcase: Creative grid with only present features -->
+        <section class="features" aria-labelledby="features-title">
+            <h2 id="features-title" class="section-title">Explore Your Fitness Tools</h2>
+            <div class="features-grid">
+                <a href="/diet" class="feature-item" aria-label="Get personalized diet recommendations">
+                    <div class="feature-icon"><img src="/static/images/Diet%20Recommandation.png" alt="Diet Icon"></div>
+                    <h3>Diet Recommendation</h3>
+                    <p>Get personalized meal plans based on your goals. AI analyzes your preferences for optimal
+                        nutrition.</p>
+                    <span class="feature-cta">Explore Now →</span>
+                </a>
+                <a href="/exercise" class="feature-item" aria-label="Access exercise guides and tips">
+                    <div class="feature-icon"><img src="/static/images/Excercise%20Suggestion.png" alt="Exercise Icon"></div>
+                    <h3>Exercise Guide</h3>
+                    <p>Access tailored workouts and fitness tips to build strength and endurance.</p>
+                    <span class="feature-cta">Get Started →</span>
+                </a>
+                <a href="/posture" class="feature-item" aria-label="Analyze and improve posture with AI">
+                    <div class="feature-icon"><img src="/static/images/Posture%20Detection%20And%20Correction.png" alt="Posture Icon"></div>
+                    <h3>Posture Detection</h3>
+                    <p>Analyze and improve your posture with AI-powered feedback.</p>
+                    <span class="feature-cta">Check Posture →</span>
+                </a>
+                <a href="/nutrition" class="feature-item" aria-label="Track nutrition and macros">
+                    <div class="feature-icon"><img src="/static/images/Nutrition%20Tracker.png" alt="Nutrition Icon"></div>
+                    <h3>Nutrition Tracker</h3>
+                    <p>Track macros & calories professionally with detailed insights.</p>
+                    <span class="feature-cta">Track Now →</span>
+                </a>
+
+                <a href="/chat" class="feature-item" aria-label="Chat with AI Fitness Assistant">
+                    <div class="feature-icon"><img src="/static/images/ai%20chatbot%20(2).png" alt="Chat Icon"></div>
+                    <h3>AI Fitness Chat</h3>
+                    <p>Ask fitness, diet & workout questions with GPT-like AI responses.</p>
+                    <span class="feature-cta">Chat Now → </span>
+                </a>
+
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Watermark Section: Footer with copyright -->
+    <footer class="watermark">
+        <p>&copy; 2026 House of Fitness. Transform Your Body. Optimize Your Nutrition. Perfect Your Posture. Powered by
+            Intelligent AI.</p>
+
+    </footer>
+</body>
+
+</html>

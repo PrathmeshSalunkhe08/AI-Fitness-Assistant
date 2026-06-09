@@ -1,0 +1,48 @@
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.assistant-box {
+    width: 420px;
+    margin: 60px auto;
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.chat {
+    background: #020617;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.controls button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.controls button:first-child {
+    background: #22c55e;
+    color: black;
+}
+
+.stop-btn {
+    background: #ef4444;
+    color: white;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #38bdf8;
+    text-decoration: none;
+}

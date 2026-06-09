@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant | House of Fitness</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .page-container {
+            padding: var(--spacing-xl) var(--spacing-md);
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 160px);
+        }
+        
+        .assistant-box {
+            background: var(--glass-bg);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-medium);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 0.5s ease-out;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1.page-title {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-lg);
+            font-size: 2.2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .chat {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            min-height: 150px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .chat p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .chat p b {
+            color: var(--accent-color);
+            margin-right: 10px;
+            display: inline-block;
+            width: 50px;
+        }
+
+        .chat span {
+            color: var(--text-primary);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        button.start-btn {
+            background: var(--secondary-gradient);
+            color: var(--text-light);
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 15px rgba(255,0,0,0.3);
+        }
+
+        button.start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255,0,0,0.5);
+        }
+
+        button.stop-btn {
+            background: rgba(0,0,0,0.5);
+            color: var(--text-secondary);
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        button.stop-btn:hover {
+            background: #111;
+            color: #fff;
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .listening-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            margin-left: 10px;
+            box-shadow: 0 0 10px #00ff00;
+            animation: pulse 1.5s infinite;
+            opacity: 0; /* Hidden by default */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        }
+
+        @media (max-width: 600px) {
+            .controls { flex-direction: column; }
+            button.start-btn, button.stop-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-center">
+            <img src="/static/images/gym-logo.png" alt="House of Fitness Logo" class="header-logo">
+            <h1 class="brand-name">House of Fitness</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-btn">Dashboard</a>
+            <a href="/about" class="nav-btn">About Us</a>
+            <a href="/logout" class="nav-btn logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="page-container">
+            <div class="assistant-box">
+                <h1 class="page-title" style="font-size: 2.2rem; margin-bottom: var(--spacing-lg);"><img src="/static/images/ai%20chatbot%20(2).png" class="title-icon" alt="icon"> AI Virtual Fitness Assistant</h1>
+
+                <div class="chat">
+                    <p><b>You:</b> <span id="user">Waiting for speech...</span></p>
+                    <p><b>AI:</b> <span id="ai">Hello! Click "Start Talking" to begin.</span></p>
+                </div>
+
+                <div class="controls">
+                    <button class="start-btn" onclick="startAssistant()">
+                        🎙️ Start Talking <span class="listening-indicator" id="indicator"></span>
+                    </button>
+                    <button class="stop-btn" onclick="stopAssistant()">🛑 Stop</button>
+                </div>
+                
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="/" style="display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); color: white; transition: all 0.3s ease;">⬅ Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="watermark">
+        <p>&copy; 2026 House of Fitness. Transform Your Body. Optimize Your Nutrition. Perfect Your Posture. Powered by Intelligent AI.</p>
+    </footer>
+
+    <script>
+        let recognition;
+        let active = false;
+        const indicator = document.getElementById("indicator");
+
+        function startAssistant() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Speech recognition only works in Google Chrome or Edge.");
+                return;
+            }
+
+            recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-IN";
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.onstart = () => {
+                active = true;
+                indicator.style.opacity = "1";
+                if(document.getElementById("ai").innerText === "Hello! Click \"Start Talking\" to begin."){
+                   speak("Hello! I am your AI Fitness Assistant. Please ask your question.");
+                }
+            };
+
+            recognition.onresult = (event) => {
+                const text = event.results[0][0].transcript;
+                document.getElementById("user").innerText = text;
+                sendToAI(text);
+            };
+
+            recognition.onerror = () => restartListening();
+            recognition.onend = () => active && restartListening();
+
+            recognition.start();
+        }
+
+        function restartListening() {
+            if (active) {
+                setTimeout(() => recognition.start(), 800);
+            }
+        }
+
+        function stopAssistant() {
+            active = false;
+            indicator.style.opacity = "0";
+            if (recognition) recognition.stop();
+            speak("Conversation stopped. Stay healthy!");
+            document.getElementById("user").innerText = "Waiting for speech...";
+        }
+
+        function sendToAI(text) {
+            document.getElementById("ai").innerText = "Thinking...";
+            fetch("/assistant/chat", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({message: text})
+            })
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("ai").innerText = data.reply;
+                speak(data.reply);
+            });
+        }
+
+        function speak(text) {
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.lang = "en-IN";
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(utter);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | House of Fitness</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .about {
+            min-height: calc(100vh - 160px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+        
+        .about-content {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .app-name {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="header-center">
+            <img src="/static/images/gym-logo.png" 
+                 alt="House of Fitness Logo" 
+                 class="header-logo">
+            <h1 class="brand-name">House of Fitness</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/" class="nav-btn">Dashboard</a>
+            <a href="/contact" class="nav-btn">Contact Us</a>
+            <a href="/logout" class="nav-btn logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="about" aria-labelledby="about-title">
+            <div class="about-content">
+                <!-- Title -->
+                <h2 id="about-title" class="app-name">About Us</h2>
+                
+                <!-- Main Project Goal -->
+                <p class="goal">
+                    <strong>Main Project Goal:</strong> To develop an AI-driven holistic fitness management system that integrates personalized diet planning, 
+                    intelligent exercise recommendations, real-time posture detection, and smart nutrition tracking into a unified, user-friendly platform.
+                    The objective is to empower individuals with data-driven health insights and accessible AI tools for sustainable lifestyle improvement.
+                </p>
+                
+                <!-- Use Cases -->
+                <h3>Use Cases</h3>
+                <ul class="use-cases">
+                    <li>Working professionals seeking structured meal planning without time-consuming research.</li>
+                    <li>Fitness enthusiasts optimizing body composition through macro and calorie tracking.</li>
+                    <li>Individuals correcting posture issues caused by prolonged sitting or improper workout form.</li>
+                    <li>Beginners requiring guided exercise recommendations with proper execution details.</li>
+                    <li>Home workout users leveraging AI feedback without access to a personal trainer.</li>
+                </ul>
+                
+                <!-- Advantages -->
+                <h3>Advantages</h3>
+                <ul class="advantages">
+                    <li>AI-driven personalization instead of generic one-size-fits-all fitness plans.</li>
+                    <li>Integrated system combining diet, exercise, posture, and nutrition tracking.</li>
+                    <li>Real-time posture feedback using advanced computer vision algorithms.</li>
+                    <li>Data-backed insights for measurable progress tracking.</li>
+                    <li>Scalable platform suitable for beginners to advanced fitness users.</li>
+                </ul>
+                
+                <!-- Features -->
+                <h3>Features</h3>
+                <ul class="about-features">
+                   <li><strong>Diet Recommendation:</strong> AI-generated weekly meal plans based on calorie calculation and structured food datasets.</li>
+                   <li><strong>Exercise Guide:</strong> Muscle-specific workout suggestions categorized by difficulty level and equipment type.</li>
+                   <li><strong>Posture Detection:</strong> Live body landmark detection for exercise form correction using MediaPipe.</li>
+                   <li><strong>Nutrition Tracker:</strong> Instant macronutrient and calorie analysis with visual representation.</li>
+                   <li><strong>AI Assistant:</strong> Conversational fitness guidance powered by intelligent response generation.</li>
+                </ul>
+                
+                <!-- Access Section: Quick links to features -->
+                <div class="access-section">
+                    <h3>Start Your AI-Powered Fitness Journey</h3>
+                    <div class="access-buttons">
+                        <a href="/diet" class="access-btn" aria-label="Go to Diet Recommendation">Diet</a>
+                        <a href="/exercise" class="access-btn" aria-label="Go to Exercise Guide">Exercise</a>
+                        <a href="/posture" class="access-btn" aria-label="Go to Posture Detection">Posture</a>
+                        <a href="/nutrition" class="access-btn" aria-label="Go to Nutrition Tracker">Nutrition</a>
+                        <a href="/chat" class="access-btn">💬 AI Assistant</a>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px; text-align: center;">
+                    <a href="/" style="display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.2); color: white; transition: all 0.3s ease;">⬅ Back to Dashboard</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="watermark">
+        <p>&copy; 2026 House of Fitness. Transform Your Body. Optimize Your Nutrition. Perfect Your Posture. Powered by Intelligent AI.</p>
+    </footer>
+</body>
+</html>
